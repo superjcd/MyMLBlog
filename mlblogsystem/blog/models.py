@@ -34,7 +34,7 @@ class Post(models.Model):
     # 与标签多对多
     tags = models.ManyToManyField(Tag, blank=True)
     # 和作者一对多
-    author = models.ForeignKey(User, on_delete=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
 
